@@ -1,7 +1,7 @@
-FROM python:3.6-slim
-MAINTAINER Femi Oladele<profemzy@gmail.com>
+FROM python:2.7-slim
+MAINTAINER Nick Janetakis <nick.janetakis@gmail.com>
 
-RUN apt-get install update && apt-get install --qq -y build-essential libpq-dev postgresql-client-9.6 --fix-missing --no-install-recommends
+RUN apt-get update && apt-get install -qq -y build-essential libpq-dev postgresql-client-9.4 --fix-missing --no-install-recommends
 
 ENV INSTALL_PATH /mobydock
 RUN mkdir -p $INSTALL_PATH
